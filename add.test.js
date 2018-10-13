@@ -52,7 +52,7 @@ it("should throw an exception when numbers contain negative number", function ()
 
 // Support different delimiters
 it("should return 3 for '//;\n1;2' string, function () {
-		expect(addTest.add("//;\n1;2")).toEqual(6);
+		expect(addTest.add("//;\n1;2")).toEqual(3);
 	})
     
 // Liður 6

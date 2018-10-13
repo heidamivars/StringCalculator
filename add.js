@@ -41,7 +41,7 @@ function add(numbers){
 					defaultDelimiters.push(delimiters[i]);
 				}
 			} else {
-                defaultDelimiters.push(customDelimiter);
+                return 0;
 			}
 		}
 		
