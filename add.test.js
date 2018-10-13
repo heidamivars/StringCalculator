@@ -20,7 +20,13 @@ describe("String Calculator",function(){
 //Liður 1
 
 it("should return 10 for '1,2,3,4' string", function(){
-		expect(testCalculator.add("1,2,3,4")).toEqual(10);
+		expect(addTest.add("1,2,3,4")).toEqual(10);
 	})
 
 //Liður 2
+
+it("should return 6 for '1\n2,3' string", function(){
+		expect(addTest.add("1\n2,3")).toEqual(6);
+	})
+
+//Liður 3
