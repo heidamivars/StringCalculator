@@ -13,8 +13,11 @@ function add(numbers){
 		var inputs = numbers.split(/[\n,]+/);  //svo kommur sé ok og fleiri truflanir
 		
 		for (var i = 0; i < inputs.length; i++) {
+            var numberToAdd = parseInt(inputs[i]);
+			if (numberToAdd <= 1000) {
 			result += parseInt(inputs[i]);
-		} 
+		  } 
+        }
     
     //þarf ekki að breyta neitt fyrir lið 2 (already ok)
     
@@ -25,9 +28,6 @@ function add(numbers){
 		
     //error message fyrir neikvæðar tölur sem eru settar í string
     
-
-		var regex = new RegExp('[' + defaultDelimiters + ']+', 'g');
-		var inputs = numbers.split(regex);
 		
     
 		return result;
@@ -35,5 +35,5 @@ function add(numbers){
 
 };
  
-console.log(add("1, -2, -3")); //error: negatives not allowed: -2, -3
+console.log(add("1001,2")); //2
     

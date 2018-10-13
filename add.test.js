@@ -40,3 +40,11 @@ it("should throw an exception when numbers contain negative number", function ()
 	});
 
 //Liður 4
+
+
+// Numbers bigger than 1000 should be ignored
+	it("should return 2 for '1001,2' string. Numbers bigger than 1000 should be ignored", function () {
+		expect(testCalculator.add("1001,2")).toEqual(2);
+	})
+
+//Liður 5
