@@ -35,7 +35,7 @@ it("should return 6 for '1\n2,3' string", function(){
 // "negatives not allowed"
 it("should throw an exception when numbers contain negative number", function () {
 		expect(function () {
-			testCalculator.add("1,-2,-3")
+			addTest.add("1,-2,-3")
 		}).toThrowError("negatives not allowed: -2,-3");
 	});
 
@@ -44,7 +44,16 @@ it("should throw an exception when numbers contain negative number", function ()
 
 // Numbers bigger than 1000 should be ignored
 	it("should return 2 for '1001,2' string. Numbers bigger than 1000 should be ignored", function () {
-		expect(testCalculator.add("1001,2")).toEqual(2);
+		expect(addTest.add("1001,2")).toEqual(2);
 	})
 
 //Liður 5
+
+
+// Support different delimiters
+it("should return 3 for '//;\n1;2' string, function () {
+		expect(addTest.add("//;\n1;2")).toEqual(6);
+	})
+    
+// Liður 6
+

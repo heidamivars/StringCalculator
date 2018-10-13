@@ -28,6 +28,22 @@ function add(numbers){
 		
     //error message fyrir neikvæðar tölur sem eru settar í string
     
+    if (numbers.indexOf('//') == 0) {
+			var customDelimiter = numbers.substring(numbers.indexOf('//') + 2, numbers.indexOf('\n'));
+			numbers = numbers.substring(numbers.indexOf('\n') + 1);
+
+			// tjekk "//[delimiter]\n" 
+        
+			var delimiters = customDelimiter.match(/[*]+/);
+
+			if (delimiters != null) {
+				for (i = 0; i < delimiters.length; i++) {
+					defaultDelimiters.push(delimiters[i]);
+				}
+			} else {
+                defaultDelimiters.push(customDelimiter);
+			}
+		}
 		
     
 		return result;
@@ -35,5 +51,5 @@ function add(numbers){
 
 };
  
-console.log(add("1001,2")); //2
+console.log(add("//;\n1;2")); //2
     
