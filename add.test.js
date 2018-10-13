@@ -30,3 +30,13 @@ it("should return 6 for '1\n2,3' string", function(){
 	})
 
 //Liður 3
+
+
+// "negatives not allowed"
+it("should throw an exception when numbers contain negative number", function () {
+		expect(function () {
+			testCalculator.add("1,-2,-3")
+		}).toThrowError("negatives not allowed: -2,-3");
+	});
+
+//Liður 4

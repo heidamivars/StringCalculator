@@ -17,11 +17,23 @@ function add(numbers){
 		} 
     
     //þarf ekki að breyta neitt fyrir lið 2 (already ok)
+    
+		var negativeNumbers = numbers.match(/-\d+/g);
+		if (negativeNumbers != null && negativeNumbers.length > 0) {
+			throw new Error("negatives not allowed: " + negativeNumbers);
+		}
 		
+    //error message fyrir neikvæðar tölur sem eru settar í string
+    
+
+		var regex = new RegExp('[' + defaultDelimiters + ']+', 'g');
+		var inputs = numbers.split(regex);
+		
+    
 		return result;
 
 
 };
  
-console.log(add("1\n2,3")); //6
+console.log(add("1, -2, -3")); //error: negatives not allowed: -2, -3
     
