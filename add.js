@@ -1,10 +1,19 @@
 // add.js
 
 function add(numbers){
-    if(typeof numbers === 'null'){
+    if(typeof numbers === '""' || undefined ){
         return 0; //return 0 if input has no value
     }
-    return numbers.length; //return lenght of string
+    
+    var sum = 0;
+    do{
+        sum = sum + numbers%10;
+        numbers = Math.floor(numbers/10)
+    } while(numbers);
+      return sum;
+    
+    //reiknar summu inputs en það er ekki hægt að hafa kommuna með hérna... 
+    
 }
 
-console.log(add(""));
+console.log(add("12"));
