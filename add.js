@@ -14,12 +14,14 @@ function add(numbers){
 		
 		for (var i = 0; i < inputs.length; i++) {
 			result += parseInt(inputs[i]);
-		}
+		} 
+    
+    //þarf ekki að breyta neitt fyrir lið 2 (already ok)
 		
 		return result;
 
 
 };
  
-console.log(add("1,2"));
+console.log(add("1,2,3,4")); //10
     

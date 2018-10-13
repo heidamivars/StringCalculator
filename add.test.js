@@ -16,3 +16,11 @@ describe("String Calculator",function(){
 		expect(addTest.add("1,2")).toEqual(3);
 	})
 });
+
+//Liður 1
+
+it("should return 10 for '1,2,3,4' string", function(){
+		expect(testCalculator.add("1,2,3,4")).toEqual(10);
+	})
+
+//Liður 2
